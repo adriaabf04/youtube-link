@@ -94,7 +94,7 @@ Donde insertaremos la URL del video deseado para descargar en video o audio :)
 
 ## Autores ✒️
 
-* **Adrián Bolufer** - *Trabajo Inicial* - [villanuevand](https://github.com/adriaabf04)
+* **Adrián Bolufer** - *Trabajo Inicial* - [adriaabf04](https://github.com/adriaabf04)
 
 
 ## Licencia 📄
