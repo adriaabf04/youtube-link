@@ -2,6 +2,10 @@
 # youtube-link
 Convertidor de videos de Youtube a MP4 y MP3
 
+![Static Badge](https://img.shields.io/badge/license-mit-green)
+![Static Badge](https://img.shields.io/badge/project_version-1.0.0-blue)
+
+
 ### Pre-requisitos 📋
 
 _Lo único imprescindible que necesitas es que el requirements.txt pasado en el proyecto y abrir dos pestañas en la terminal para ejecutar el back y el front por separado._
