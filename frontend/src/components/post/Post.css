@@ -1,0 +1,49 @@
+/* CONTENIDO DE LA RECETA*/
+.receta {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+}
+#imagen {
+    flex: 4;
+}
+
+#description {
+    flex: 2;
+}
+
+#description .data-recipe {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#description .data-recipe span {
+    font-size: 20px;
+    flex: 1;
+    font-weight: bolder;
+}
+
+#user-author{
+    font-size: 15px;
+}
+
+
+#categories-recipe {
+    display: flex;
+    gap: 10px;
+}
+
+.breadcumb {
+    padding: 2px 5px;
+    color: black;
+    border: 2px solid red;
+    background-color: red;
+    font-size: 13px;
+}
+
+#valoration {
+    flex: 1;
+}

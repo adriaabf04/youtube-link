@@ -1,0 +1,4 @@
+# Toda la carpeta envtest
+envtest/
+
+node_modules/

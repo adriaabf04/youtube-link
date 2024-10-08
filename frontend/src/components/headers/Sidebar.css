@@ -1,0 +1,35 @@
+#header-box {
+    @apply w-[20%] h-[97dvh] ml-3 mt-3;
+    display: flex;
+    flex-direction: column;
+    width: 20%; /* Adjust this value to your needs */
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ff99008c;
+}
+.item-header {
+    flex: 1;
+}
+.body-box {
+    flex: 2;
+}
+#image {
+    flex: 0.60;
+}
+#options {
+    flex: 3;
+}
+#profile {
+    flex: 0.5;
+}  
+
+#fullname-user {
+    font-size: 18px;
+}
+
+#username-user {
+    font-size: 15px;
+    color: #9CA3AF;
+}
