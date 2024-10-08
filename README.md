@@ -82,7 +82,7 @@ Donde insertaremos la URL del video deseado para descargar en video o audio :)
 ## Construido con 🛠️
 
 * [React](http://www.dropwizard.io/1.0.2/docs/) - Framework para realizar la estética de la web
-* [Flask](https://flask.palletsprojects.com/en/3.0.x/) - Con esto construimos la API
+* [Flask](https://flask.palletsprojects.com/en/3.0.x/) - Framework de Python para construir la API
 
 
 ## Autores ✒️
