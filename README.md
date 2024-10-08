@@ -4,6 +4,7 @@ Convertidor de videos de Youtube a MP4 y MP3
 
 ![Static Badge](https://img.shields.io/badge/license-mit-green)
 ![Static Badge](https://img.shields.io/badge/project_version-1.0.0-blue)
+[![Forks][forks-shield]][forks-url]
 
 ![imagen](https://github.com/user-attachments/assets/92665496-5c97-4522-8d88-3cd0428b523b)
 
