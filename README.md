@@ -40,7 +40,7 @@ source nombre_entorno/bin/activate
 En Windows
 
 ```
-source nombre_entorno/bin/activate
+nombre_entorno\Scripts\activate
 ```
 
 _Paso 3: Instalar los requirements del proyecto_
