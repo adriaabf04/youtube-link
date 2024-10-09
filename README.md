@@ -15,7 +15,13 @@ Convertidor de videos de Youtube a MP4 y MP3
 
 ### Pre-requisitos 📋
 
-_Lo único imprescindible que necesitas es que el requirements.txt pasado en el proyecto y abrir dos pestañas en la terminal para ejecutar el back y el front por separado._
+_Una cosa imprescindible que necesitas es que el requirements.txt pasado en el proyecto y abrir dos pestañas en la terminal para ejecutar el back y el front por separado._
+
+_Y otra de la que debes de disponer es que necesitas el ffmepg. Pon en la terminal lo siguiente:_
+
+```
+sudo apt install ffmepg
+```
 
 ### Instalación 🔧
 
@@ -35,12 +41,6 @@ En Linux
 
 ```
 source nombre_entorno/bin/activate
-```
-
-En Windows
-
-```
-nombre_entorno\Scripts\activate
 ```
 
 _Paso 3: Instalar los requirements del proyecto_
