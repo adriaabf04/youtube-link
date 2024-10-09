@@ -7,6 +7,7 @@ from mutagen.mp3 import MP3
 from mutagen.id3 import ID3, APIC, TPE1, error
 import requests
 import platform
+import time
 
 app = Flask(__name__)
 CORS(app)
@@ -66,9 +67,19 @@ def video():
         return jsonify({'error': str(e)}), 500
     finally:
         # Eliminar el archivo temporal después de enviarlo
-        if os.path.exists(f"{video['titulo']}.mp4"):
-            os.remove(f"{video['titulo']}.mp4")
-            print(f"Archivo temporal eliminado: {video['titulo']}.mp4")  
+        mp4_file_path = f"{video['titulo']}.mp4"
+        if os.path.exists(mp4_file_path):
+            try:
+                os.remove(mp4_file_path)
+                print(f"Archivo temporal eliminado: {mp4_file_path}")
+            except PermissionError:
+                print(f"No se pudo eliminar el archivo {mp4_file_path} porque está en uso.")
+                time.sleep(1)  # Esperar un segundo antes de intentar eliminar de nuevo
+                try:
+                    os.remove(mp4_file_path)
+                    print(f"Archivo temporal eliminado después de la espera: {mp4_file_path}")
+                except Exception as e:
+                    print(f"Error al intentar eliminar el archivo: {str(e)}") 
 
 @app.route('/api/audio', methods=['POST'])
 def audio():
@@ -156,11 +167,23 @@ def audio():
     finally:
         # Eliminar los archivos temporales después de enviarlos
         if os.path.exists(audio_file_path):
-            os.remove(audio_file_path)
-            print(f"Archivo temporal eliminado: {audio_file_path}")
+            try:
+                os.remove(audio_file_path)
+                print(f"Archivo temporal eliminado: {audio_file_path}")
+            except PermissionError:
+                print(f"No se pudo eliminar el archivo {audio_file_path} porque está en uso.")
+                time.sleep(1)  # Esperar un segundo antes de intentar eliminar de nuevo
+                try:
+                    os.remove(audio_file_path)
+                    print(f"Archivo temporal eliminado después de la espera: {audio_file_path}")
+                except Exception as e:
+                    print(f"Error al intentar eliminar el archivo: {str(e)}")
         if thumbnail_path and os.path.exists(thumbnail_path):
-            os.remove(thumbnail_path)
-            print(f"Archivo temporal eliminado: {thumbnail_path}")
+            try:
+                os.remove(thumbnail_path)
+                print(f"Archivo temporal eliminado: {thumbnail_path}")
+            except Exception as e:
+                print(f"Error al intentar eliminar el thumbnail: {str(e)}")
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
