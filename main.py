@@ -6,9 +6,16 @@ from flask_cors import CORS
 from mutagen.mp3 import MP3
 from mutagen.id3 import ID3, APIC, TPE1, error
 import requests
+import platform
 
 app = Flask(__name__)
 CORS(app)
+    
+
+if (platform.system() == 'Windows'):
+    FFMPEG_PATH = 'C:/ffmpeg/bin/ffmpeg.exe'
+else:
+    FFMPEG_PATH = '/usr/bin/ffmpeg'
 
 @app.route('/api')
 def index():
@@ -42,7 +49,7 @@ def video():
         ydl_opts = {
             'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4',
             'outtmpl': f"{video['titulo']}.mp4",
-            'ffmpeg_location': '/usr/bin/ffmpeg',
+            'ffmpeg_location': FFMPEG_PATH,
         }
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             ydl.download([video['url_video']])
@@ -84,7 +91,7 @@ def audio():
                 'preferredquality': '192',
             }],
             'outtmpl': f"{video['titulo']}.%(ext)s",
-            'ffmpeg_location': '/usr/bin/ffmpeg',
+            'ffmpeg_location': FFMPEG_PATH,
         }
 
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
