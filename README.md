@@ -3,6 +3,8 @@
 
 ![Static Badge](https://img.shields.io/badge/license-mit-green)
 ![Static Badge](https://img.shields.io/badge/project_version-1.0.0-blue)
+![Static Badge](https://img.shields.io/badge/windows-not_available-red)
+![Static Badge](https://img.shields.io/badge/mac-not_available-red)
 
 
 Convertidor de videos de Youtube a MP4 y MP3
