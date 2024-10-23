@@ -22,7 +22,7 @@ _Una cosa imprescindible que necesitas es que el requirements.txt pasado en el p
 _Y otra de la que debes de disponer es que necesitas el ffmepg. Pon en la terminal lo siguiente:_
 
 ```
-sudo apt install ffmepg
+sudo apt install ffmpeg
 ```
 
 ### Instalación 🔧
